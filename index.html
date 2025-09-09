@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full Stack Developer portfolio - Modern web and AI solutions">
+    <title>Aniket banerjee - Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="particle-field"></div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="#hero" class="nav__brand glow-text">Portfolio</a>
+            <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list">
+                    <li><a href="#hero" class="nav__link">Home</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#skills" class="nav__link">Skills</a></li>
+                    <li><a href="#projects" class="nav__link">Projects</a></li>
+                    <li><a href="#blog" class="nav__link">Blog</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero__content reveal">
+            <img src="avatar.jpeg" alt="Profile Avatar" class="hero__avatar">
+            <h1 class="hero__title">
+                I'm a passionate <span class="cyber-glitch">Full Stack Developer</span>
+            </h1>
+            <p class="hero__subtitle typing-effect">
+                From Anpara, Uttar Pradesh. With 3+ years in modern web and AI-driven solutions.
+            </p>
+            <div class="hero__cta">
+                <a href="#projects" class="btn neon-btn">
+                    <span>View My Work</span>
+                </a>
+                <a href="#contact" class="btn holographic-border">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section__title glow-text reveal">About Me</h2>
+            <div class="about-grid">
+                <div class="glass-card about-card reveal">
+                    <span class="card-icon">⚡</span>
+                    <h3>Performance Focused</h3>
+                    <p>Obsessed with detail and efficiency, building fast and scalable applications.</p>
+                </div>
+                <div class="glass-card about-card reveal">
+                    <span class="card-icon">🚀</span>
+                    <h3>Modern Technologies</h3>
+                    <p>Specializing in React.js, Node.js, and cutting-edge web technologies.</p>
+                </div>
+                <div class="glass-card about-card reveal">
+                    <span class="card-icon">👥</span>
+                    <h3>Team Leadership</h3>
+                    <p>Leading dynamic teams to deliver beautiful, user-driven platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section__title glow-text reveal">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skills-grid reveal">
+                    <div class="skill-item glass-card">
+                        <span class="skill-icon">🌐</span>
+                        <div class="skill-info">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span class="skill-icon">⚡</span>
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span class="skill-icon">⚛️</span>
+                        <div class="skill-info">
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span class="skill-icon">🐍</span>
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-level" data-level="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span class="skill-icon">💻</span>
+                        <div class="skill-info">
+                            <span class="skill-name">C/C++</span>
+                            <div class="skill-level" data-level="65"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item glass-card">
+                        <span class="skill-icon">🗄️</span>
+                        <div class="skill-info">
+                            <span class="skill-name">Databases</span>
+                            <div class="skill-level" data-level="70"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-chart-container reveal">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section__title glow-text reveal">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="glass-card project-card reveal">
+                    <div class="project-header">
+                        <h3 class="project-title">React Portfolio Dashboard</h3>
+                        <div class="project-status">
+                            <span class="status-dot pulse"></span>
+                            <span>under-devlopment</span>
+                        </div>
+                    </div>
+                    <p>Modern portfolio dashboard built with React.js, featuring real-time animations and responsive design.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="glass-card project-card reveal">
+                    <div class="project-header">
+                        <h3 class="project-title">AI-Powered Web App</h3>
+                        <div class="project-status">
+                            <span class="status-dot pulse"></span>
+                            <span>under-devlopment</span>
+                        </div>
+                    </div>
+                    <p>Full-stack application integrating machine learning models for intelligent data processing.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">ML</span>
+                    </div>
+                </div>
+                <div class="glass-card project-card reveal">
+                    <div class="project-header">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span>under-devlopment</span>
+                        </div>
+                    </div>
+                    <p>Scalable e-commerce solution with advanced features and seamless user experience.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section__title glow-text reveal">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <h3>Let's Connect</h3>
+                    <p>Ready to collaborate on your next project? I'm always excited to work on innovative solutions.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span>📧</span>
+                            <span>aniketbanerjee12233@gmail.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <span>📱</span>
+                            <span>+91 94516 27245</span>
+                        </div>
+                        <div class="contact-method">
+                            <span>📍</span>
+                            <span>Anpara, Uttar Pradesh, India</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="glass-card contact-form reveal" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" class="futuristic-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" class="futuristic-input" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" class="futuristic-input" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn neon-btn">
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 aniket banerjee. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
